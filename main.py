@@ -4,10 +4,14 @@ from flask import Flask, jsonify, request
 from sklearn.externals import joblib
 # import numpy as np
 from flasgger import Swagger
+from flask_cors import CORS
+
+
+
 
 app = Flask(__name__)
 Swagger(app)
-
+CORS(app)
 
 
 @app.route('/input/task', methods=['POST'])
