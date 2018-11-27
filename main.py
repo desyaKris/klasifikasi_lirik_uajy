@@ -1,4 +1,4 @@
-from normalization import normalize_corpus
+# from normalization import normalize_corpus
 from flask import Flask, jsonify, request
 # from flasgger import Swagger
 from sklearn.externals import joblib
