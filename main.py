@@ -2,7 +2,7 @@
 from flask import Flask, jsonify, request
 # from flasgger import Swagger
 from sklearn.externals import joblib
-# import numpy as np
+import numpy as np
 from flasgger import Swagger
 from flask_cors import CORS
 
@@ -40,8 +40,7 @@ def predict():
     """
     new_task = request.get_json()
     text = new_task['text']
-    X_New = [text]
-    # X_New = np.array([text])
+    X_New = np.array([text])
    # X_New=normalize_corpus(X_New)
 
 
